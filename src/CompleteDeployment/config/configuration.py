@@ -4,11 +4,7 @@ from CompleteDeployment.utils.common import create_directories,read_yaml
 from pathlib import Path
 
 
-from CompleteDeployment.entity.config_entity import (DataIngestionConfig,
-                                                PrepareBaseModelConfig,
-                                                PrepareCallbacksConfig,
-                                                TrainingConfig,
-                                                EvaluationConfig)
+from CompleteDeployment.entity.config_entity import DataIngestionConfig  
 
 class ConfigurationManager:
     def __init__(

@@ -1,1 +1,286 @@
 [2023-08-23 16:00:07,887: INFO: main: hellow]
+[2023-08-25 11:27:07,077: INFO: main: hellow]
+[2023-08-25 11:43:24,309: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-25 11:43:24,309: ERROR: main: mapping values are not allowed here
+  in "config/config.yaml", line 3, column 15]
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/main.py", line 8, in <module>
+    data_ingestion.main()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config=ConfigurationManager()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/config/configuration.py", line 15, in __init__
+    self.config = read_yaml(config_filepath)
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/ensure/main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/utils/common.py", line 38, in read_yaml
+    raise e
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/utils/common.py", line 30, in read_yaml
+    content=yaml.safe_load(yaml_file)
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/yaml/composer.py", line 58, in compose_document
+    self.get_event()
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/yaml/parser.py", line 118, in get_event
+    self.current_event = self.state()
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/yaml/parser.py", line 193, in parse_document_end
+    token = self.peek_token()
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/yaml/scanner.py", line 129, in peek_token
+    self.fetch_more_tokens()
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/yaml/scanner.py", line 223, in fetch_more_tokens
+    return self.fetch_value()
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/yaml/scanner.py", line 577, in fetch_value
+    raise ScannerError(None, None,
+yaml.scanner.ScannerError: mapping values are not allowed here
+  in "config/config.yaml", line 3, column 15
+[2023-08-25 11:48:42,922: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-25 11:48:42,923: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-25 11:48:42,928: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-25 11:48:42,928: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/utils/common.py", line 32, in read_yaml
+    return ConfigBox(content)
+  File "box/box.py", line 259, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/main.py", line 8, in <module>
+    data_ingestion.main()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config=ConfigurationManager()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/config/configuration.py", line 16, in __init__
+    self.params = read_yaml(params_filepath)
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/ensure/main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/utils/common.py", line 35, in read_yaml
+    raise ValueError('yaml file is empty')
+ValueError: yaml file is empty
+[2023-08-25 11:48:55,426: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-25 11:48:55,426: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-25 11:48:55,427: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-25 11:48:55,427: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/utils/common.py", line 32, in read_yaml
+    return ConfigBox(content)
+  File "box/box.py", line 259, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/main.py", line 8, in <module>
+    data_ingestion.main()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config=ConfigurationManager()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/config/configuration.py", line 16, in __init__
+    self.params = read_yaml(params_filepath)
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/ensure/main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/utils/common.py", line 35, in read_yaml
+    raise ValueError('yaml file is empty')
+ValueError: yaml file is empty
+[2023-08-25 11:50:45,267: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-25 11:50:45,267: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-25 11:50:45,268: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-25 11:50:45,268: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/utils/common.py", line 32, in read_yaml
+    return ConfigBox(content)
+  File "box/box.py", line 259, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/main.py", line 8, in <module>
+    data_ingestion.main()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config=ConfigurationManager()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/config/configuration.py", line 16, in __init__
+    self.params = read_yaml(params_filepath)
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/ensure/main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/utils/common.py", line 35, in read_yaml
+    raise ValueError('yaml file is empty')
+ValueError: yaml file is empty
+[2023-08-25 11:51:58,035: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-25 11:51:58,035: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-25 11:51:58,036: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-25 11:51:58,036: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/utils/common.py", line 32, in read_yaml
+    return ConfigBox(content)
+  File "box/box.py", line 259, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/main.py", line 8, in <module>
+    data_ingestion.main()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config=ConfigurationManager()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/config/configuration.py", line 16, in __init__
+    self.params = read_yaml(params_filepath)
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/ensure/main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/utils/common.py", line 35, in read_yaml
+    raise ValueError('yaml file is empty')
+ValueError: yaml file is empty
+[2023-08-25 11:52:41,112: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-25 11:52:41,113: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-25 11:52:41,113: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-25 11:52:41,113: ERROR: main: yaml file is empty]
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/utils/common.py", line 32, in read_yaml
+    return ConfigBox(content)
+  File "box/box.py", line 259, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/main.py", line 8, in <module>
+    data_ingestion.main()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config=ConfigurationManager()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/config/configuration.py", line 16, in __init__
+    self.params = read_yaml(params_filepath)
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/ensure/main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/utils/common.py", line 35, in read_yaml
+    raise ValueError('yaml file is empty')
+ValueError: yaml file is empty
+[2023-08-25 11:53:27,936: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-25 11:53:27,937: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-25 11:53:27,938: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-25 11:53:27,938: INFO: common: created directory at: artifacts]
+[2023-08-25 11:53:27,938: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-25 11:57:49,997: ERROR: main: <urlopen error [Errno 110] Connection timed out>]
+Traceback (most recent call last):
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1447, in connect
+    super().connect()
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 946, in connect
+    self.sock = self._create_connection(
+  File "/home/anurag/miniconda3/lib/python3.9/socket.py", line 844, in create_connection
+    raise err
+  File "/home/anurag/miniconda3/lib/python3.9/socket.py", line 832, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/main.py", line 8, in <module>
+    data_ingestion.main()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/components/data_ingestion.py", line 16, in download_file
+    filename,headers=request.urlretrieve(
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 239, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 555, in error
+    result = self._call_chain(*args)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 747, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 1389, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+[2023-08-25 12:03:39,718: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-25 12:03:39,719: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-25 12:03:39,720: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-25 12:03:39,720: INFO: common: created directory at: artifacts]
+[2023-08-25 12:03:39,720: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-25 12:08:06,445: ERROR: main: <urlopen error [Errno 110] Connection timed out>]
+Traceback (most recent call last):
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1447, in connect
+    super().connect()
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 946, in connect
+    self.sock = self._create_connection(
+  File "/home/anurag/miniconda3/lib/python3.9/socket.py", line 844, in create_connection
+    raise err
+  File "/home/anurag/miniconda3/lib/python3.9/socket.py", line 832, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/main.py", line 8, in <module>
+    data_ingestion.main()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/components/data_ingestion.py", line 16, in download_file
+    filename,headers=request.urlretrieve(
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 239, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 555, in error
+    result = self._call_chain(*args)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 747, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 1389, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
