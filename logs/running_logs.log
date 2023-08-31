@@ -284,3 +284,23 @@ Traceback (most recent call last):
   File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 1349, in do_open
     raise URLError(err)
 urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+[2023-08-31 10:19:53,857: INFO: stage_03_training: *******************]
+[2023-08-31 10:19:53,857: INFO: stage_03_training: >>>>>> stage Training started <<<<<<]
+[2023-08-31 10:19:53,859: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-31 10:19:53,860: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-31 10:19:53,860: INFO: common: created directory at: artifacts]
+[2023-08-31 10:19:53,860: INFO: common: created directory at: artifacts/prepare_callbacks/checkpoint_dir]
+[2023-08-31 10:19:53,860: INFO: common: created directory at: artifacts/prepare_callbacks/tensorboard_log_dir]
+[2023-08-31 10:19:53,861: ERROR: stage_03_training: 'PosixPath' object has no attribute 'endswith']
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/pipeline/stage_03_training.py", line 38, in <module>
+    obj.main()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/pipeline/stage_03_training.py", line 19, in main
+    callback_list = prepare_callbacks.get_tb_ckpt_callbacks()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/components/prepare_callbacks.py", line 34, in get_tb_ckpt_callbacks
+    self._create_ckpt_callbacks
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/components/prepare_callbacks.py", line 25, in _create_ckpt_callbacks
+    return tf.keras.callbacks.ModelCheckpoint(
+  File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/keras/src/callbacks.py", line 1369, in __init__
+    if filepath and filepath.endswith(".keras") and options is not None:
+AttributeError: 'PosixPath' object has no attribute 'endswith'
