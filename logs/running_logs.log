@@ -304,3 +304,66 @@ Traceback (most recent call last):
   File "/home/anurag/Desktop/active projects/deployment/deploy/lib/python3.9/site-packages/keras/src/callbacks.py", line 1369, in __init__
     if filepath and filepath.endswith(".keras") and options is not None:
 AttributeError: 'PosixPath' object has no attribute 'endswith'
+[2023-08-31 11:18:41,113: INFO: stage_01_data_ingestion: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2023-08-31 11:18:41,114: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2023-08-31 11:18:41,115: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-31 11:18:41,115: INFO: common: created directory at: artifacts]
+[2023-08-31 11:18:41,115: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-31 11:23:03,645: ERROR: stage_01_data_ingestion: <urlopen error [Errno 110] Connection timed out>]
+Traceback (most recent call last):
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 1346, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1285, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1331, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1280, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1040, in _send_output
+    self.send(msg)
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 980, in send
+    self.connect()
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 1447, in connect
+    super().connect()
+  File "/home/anurag/miniconda3/lib/python3.9/http/client.py", line 946, in connect
+    self.sock = self._create_connection(
+  File "/home/anurag/miniconda3/lib/python3.9/socket.py", line 844, in create_connection
+    raise err
+  File "/home/anurag/miniconda3/lib/python3.9/socket.py", line 832, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/pipeline/stage_01_data_ingestion.py", line 23, in <module>
+    obj.main()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+  File "/home/anurag/Desktop/active projects/deployment/CompleteDeployment/src/CompleteDeployment/components/data_ingestion.py", line 16, in download_file
+    filename,headers=request.urlretrieve(
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 239, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 555, in error
+    result = self._call_chain(*args)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 747, in http_error_302
+    return self.parent.open(new, timeout=req.timeout)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 517, in open
+    response = self._open(req, data)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 1389, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/home/anurag/miniconda3/lib/python3.9/urllib/request.py", line 1349, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
